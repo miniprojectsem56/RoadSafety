@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -17,10 +19,23 @@ public class MainActivity extends AppCompatActivity {
     FragmentAdapter adapter;
     Button button;
 
+    static int flg=0;
+
+    Intent login_activity ;
+
     int cnt=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        if(flg==0)
+        {
+            login_activity = new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(login_activity);
+            finish();
+            flg=1;
+            Toast.makeText(MainActivity.this,"Taking flag",Toast.LENGTH_LONG).show();
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
