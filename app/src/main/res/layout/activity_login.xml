@@ -71,7 +71,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="sign in"
+        android:textColor="@color/black"
+        android:text="sign up"
         android:layout_gravity="center_horizontal"
         android:id="@+id/sign_in"
         />

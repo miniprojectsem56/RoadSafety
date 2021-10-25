@@ -23,7 +23,7 @@ public class CrearteAccountActivity extends AppCompatActivity {
         email_of_person = findViewById(R.id.email);
         created_password = findViewById(R.id.create_password);
         confirmed_password = findViewById(R.id.confirm_password);
-
+        create_account = findViewById(R.id.create_button);
         toMainActivity = new Intent(CrearteAccountActivity.this,MainActivity.class);
 
         create_account.setOnClickListener(new View.OnClickListener() {
